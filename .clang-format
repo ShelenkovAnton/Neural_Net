@@ -1,0 +1,44 @@
+Language: Cpp
+
+Standard: Cpp11
+IndentWidth: 4
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: true
+AllowAllConstructorInitializersOnNextLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: Inline
+AlignConsecutiveAssignments: true
+AllowShortLambdasOnASingleLine: All
+AlwaysBreakBeforeMultilineStrings: false
+AlignOperands: true
+SpacesInParentheses: true
+SpacesInAngles: false
+SpaceInEmptyParentheses: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeParens: true
+SpaceBeforeAssignmentOperators: true
+SpaceAfterTemplateKeyword: true
+SpaceAfterLogicalNot: false
+PointerAlignment: Left
+NamespaceIndentation: None
+
+BraceWrapping:
+  AfterClass:      true
+  AfterControlStatement: true
+  AfterEnum:       true
+  AfterFunction:   true
+  AfterNamespace:  true
+  AfterObjCDeclaration: true
+  AfterStruct:     true
+  AfterUnion:      true
+  BeforeCatch:     true
+  BeforeElse:      true
+
+BreakBeforeBraces: Custom
+
+ColumnLimit: 160
+
+AccessModifierOffset: -4
+
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
