@@ -1,17 +1,17 @@
 #include "DataSet/mnistset.h"
-#include "net.h"
+#include "Net/net.h"
 
 #include <QDebug>
 
 #include <QApplication>
-#include <QGraphicsScene>
-#include <QGraphicsView>
 #include <QWidget>
 
 #include <QObject>
 
-#include "painter/paintwidget.h"
+#include "GUI/paintwidget.h"
 #include <iostream>
+
+#include "GUI/mainwindow.h"
 
 void paint( std::vector<float> inputs )
 {
@@ -55,8 +55,11 @@ int main( int argc, char* argv[] )
     net.create_layer( 100, /*! <- neuron count */ 784 /*! <- inputs count */ );
     net.create_layer( 10 );
 
-    net.learn( net::MnistSet{} );
-    create_paint_widget( net );
+    MainWindow w;
+    w.show( );
+
+    // net.learn( net::MnistSet{} );
+    // create_paint_widget( net );
 
     return a.exec( );
 }

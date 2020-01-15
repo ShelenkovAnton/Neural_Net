@@ -5,11 +5,11 @@
 #include <filesystem>
 #include <string>
 
-constexpr auto testing_labels_path = "/../Net/DataSet/mnist/t10k-labels.idx1-ubyte";
-constexpr auto testing_images_path = "/../Net/DataSet/mnist/t10k-images.idx3-ubyte";
+constexpr auto testing_labels_path = "/../Sources/DataSet/mnist/t10k-labels.idx1-ubyte";
+constexpr auto testing_images_path = "/../Sources/DataSet/mnist/t10k-images.idx3-ubyte";
 
-constexpr auto trainig_labels_path = "/../Net/DataSet/mnist/train-labels.idx1-ubyte";
-constexpr auto trainig_images_path = "/../Net/DataSet/mnist/train-images.idx3-ubyte";
+constexpr auto trainig_labels_path = "/../Sources/DataSet/mnist/train-labels.idx1-ubyte";
+constexpr auto trainig_images_path = "/../Sources/DataSet/mnist/train-images.idx3-ubyte";
 
 namespace net
 {
@@ -73,12 +73,12 @@ auto MnistSet::read_mnist_labels( const std::string& full_path ) const -> std::v
     }
     else
     {
-        throw std::runtime_error( "File don't open" );
+        throw std::runtime_error( "Mnist file don't open" );
     }
 
     if ( byts_to_int( data.left( 4 ) ) != 2049 )
     {
-        std::runtime_error( "Invalid magic number." );
+        throw std::runtime_error( "Invalid magic number." );
     }
 
     std::vector<size_t> labels( static_cast<size_t>( byts_to_int( data.mid( 4, 4 ) ) ) );

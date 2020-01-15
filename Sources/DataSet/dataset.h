@@ -1,6 +1,6 @@
 #pragma once
 
-#include "activationfunction.h"
+#include "Net/activationfunction.h"
 #include <stdint.h>
 
 namespace net

@@ -115,7 +115,8 @@ auto Net::learn( const DataSet& data_set ) -> void
 
     m_errors.resize( m_layers.back( )->neuron_count( ) );
 
-    const auto data_set_size = data_set.get_learning_count( );
+    // const auto data_set_size = data_set.get_learning_count( );
+    const auto data_set_size = 100;
 
     for ( size_t i = 0; i < data_set_size; ++i )
     {
