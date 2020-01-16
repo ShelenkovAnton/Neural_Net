@@ -11,7 +11,7 @@ auto Styles::aply_background_style( QWidget* const widget, const QColor& color )
     widget->setStyleSheet( widget->styleSheet( ) + style );
 }
 
-auto Styles::aply_checkable_btn_style( QWidget* const widget ) -> void
+auto Styles::aply_btn_style( QWidget* const widget ) -> void
 {
     const auto style = QString( R"(
     QAbstractButton

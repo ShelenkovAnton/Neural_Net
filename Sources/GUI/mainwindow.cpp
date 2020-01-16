@@ -3,13 +3,16 @@
 
 #include <QButtonGroup>
 
+#include "learningwidget.h"
+#include "paintwidget.h"
+#include "setupnetwidget.h"
 #include "styles.h"
 
 MainWindow::MainWindow( QWidget* parent )
     : QMainWindow( parent )
     , ui( new Ui::MainWindow )
-    , m_setup_net_wgt{new QLabel( "setup" )}
-    , m_learning_wgt{new QLabel( "learning" )}
+    , m_setup_net_wgt{new SetupNetWidget( )}
+    , m_learning_wgt{new LearningWidget( )}
     , m_painting_wgt{new PaintWidget( )}
 {
     ui->setupUi( this );
@@ -41,7 +44,7 @@ auto MainWindow::add_widgets( ) -> void
 auto MainWindow::init_styles( ) -> void
 {
     Styles::aply_background_style( this, {Styles::Colors::window_background} );
-    Styles::aply_checkable_btn_style( ui->frame_btn );
+    Styles::aply_btn_style( ui->frame_btn );
 }
 
 auto MainWindow::init_connections( ) -> void

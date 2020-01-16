@@ -2,9 +2,9 @@
 
 #include <QtWidgets/QMainWindow>
 
-#include <QLabel> // test
-
-#include "paintwidget.h"
+class SetupNetWidget;
+class PaintWidget;
+class LearningWidget;
 
 namespace Ui
 {
@@ -35,7 +35,7 @@ private:
 private:
     Ui::MainWindow* ui;
 
-    QLabel* m_setup_net_wgt{nullptr}; // change Qlabel to proper widgets
-    QLabel* m_learning_wgt{nullptr};  // change Qlabel to proper widgets
+    SetupNetWidget* m_setup_net_wgt{nullptr};
+    LearningWidget* m_learning_wgt{nullptr};
     PaintWidget* m_painting_wgt{nullptr};
 };
