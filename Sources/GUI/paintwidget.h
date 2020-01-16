@@ -13,7 +13,7 @@ class PaintWidget final : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PaintWidget( );
+    explicit PaintWidget( ) = default;
 
 signals:
     void s_net_input( std::vector<float> );

@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <QDebug>
+#include <QButtonGroup>
 
 #include "styles.h"
 
@@ -15,8 +15,6 @@ MainWindow::MainWindow( QWidget* parent )
     ui->setupUi( this );
 
     init( );
-    init_connections( );
-    init_styles( );
 }
 
 MainWindow::~MainWindow( )
@@ -24,9 +22,26 @@ MainWindow::~MainWindow( )
     delete ui;
 }
 
+auto MainWindow::init( ) -> void
+{
+    hide_widgets( );
+    add_widgets( );
+    init_btn_group( );
+    init_connections( );
+    init_styles( );
+}
+
+auto MainWindow::add_widgets( ) -> void
+{
+    ui->centralLayout->addWidget( m_learning_wgt );
+    ui->centralLayout->addWidget( m_painting_wgt );
+    ui->centralLayout->addWidget( m_setup_net_wgt );
+}
+
 auto MainWindow::init_styles( ) -> void
 {
-    Styles::aply_background_style( this, {Styles::Colors::background} );
+    Styles::aply_background_style( this, {Styles::Colors::window_background} );
+    Styles::aply_checkable_btn_style( ui->frame_btn );
 }
 
 auto MainWindow::init_connections( ) -> void
@@ -36,15 +51,12 @@ auto MainWindow::init_connections( ) -> void
     connect( ui->btnPainting, &QPushButton::clicked, this, &MainWindow::show_painting_wgt );
 }
 
-auto MainWindow::init( ) -> void
+auto MainWindow::init_btn_group( ) -> void
 {
-    m_learning_wgt->setVisible( false );
-    m_painting_wgt->setVisible( false );
-    m_setup_net_wgt->setVisible( false );
-
-    ui->centralLayout->addWidget( m_learning_wgt );
-    ui->centralLayout->addWidget( m_painting_wgt );
-    ui->centralLayout->addWidget( m_setup_net_wgt );
+    const auto group = new QButtonGroup( );
+    group->addButton( ui->btnSetupNet );
+    group->addButton( ui->btnLearning );
+    group->addButton( ui->btnPainting );
 }
 
 auto MainWindow::show_setup_net_wgt( ) -> void

@@ -5,10 +5,6 @@ constexpr auto pixSize{28};
 constexpr auto penSize  = 30;
 constexpr auto penColor = Qt::black;
 
-PaintWidget::PaintWidget( )
-{
-}
-
 auto PaintWidget::paintEvent( QPaintEvent* ) -> void
 {
     QPainter painter{this};

@@ -29,6 +29,8 @@ private:
     auto init_styles( ) -> void;
     auto init_connections( ) -> void;
     auto hide_widgets( ) -> void;
+    auto init_btn_group( ) -> void;
+    auto add_widgets( ) -> void;
 
 private:
     Ui::MainWindow* ui;
