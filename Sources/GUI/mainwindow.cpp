@@ -32,6 +32,7 @@ auto MainWindow::init( ) -> void
     init_btn_group( );
     init_connections( );
     init_styles( );
+    ui->btnSetupNet->click( );
 }
 
 auto MainWindow::add_widgets( ) -> void
@@ -82,7 +83,7 @@ auto MainWindow::show_painting_wgt( ) -> void
 
 auto MainWindow::hide_widgets( ) -> void
 {
+    m_setup_net_wgt->setVisible( false );
     m_learning_wgt->setVisible( false );
     m_painting_wgt->setVisible( false );
-    m_setup_net_wgt->setVisible( false );
 }

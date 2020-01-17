@@ -17,12 +17,13 @@ auto Styles::aply_btn_style( QWidget* const widget ) -> void
     QAbstractButton
     {
         background-color: %1;
+        color: white;
     }
-    QPushButton:checked
+    QAbstractButton:checked
     {
         background-color: %2;
     }
-    QPushButton:hover
+    QAbstractButton:hover
     {
         background-color: %3;
     }
@@ -31,5 +32,17 @@ auto Styles::aply_btn_style( QWidget* const widget ) -> void
                            .arg( Styles::colors.checked_btn_background )
                            .arg( Styles::colors.hovered_btn_background );
 
-    widget->setStyleSheet( style );
+    widget->setStyleSheet( widget->styleSheet( ) + style );
+}
+
+auto Styles::aply_group_box_style( QWidget* const widget ) -> void
+{
+    const auto style = QString( R"(
+    QGroupBox
+    {
+        color: white;
+    }
+)" );
+
+    widget->setStyleSheet( widget->styleSheet( ) + style );
 }

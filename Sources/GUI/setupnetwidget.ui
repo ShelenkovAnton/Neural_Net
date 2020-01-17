@@ -39,14 +39,14 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="btnAddLayer">
         <property name="text">
          <string>Add Layer</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="btnRemoveLayer">
         <property name="text">
          <string>Remove Layer</string>
         </property>
@@ -60,7 +60,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="btnLoadFromFile">
         <property name="text">
          <string>Load from file</string>
         </property>
@@ -74,7 +74,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="btnStartLearning">
         <property name="text">
          <string>Start learning</string>
         </property>
@@ -97,7 +97,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame">
+    <widget class="QFrame" name="frNetSetup">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -199,7 +199,7 @@
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents">
+     <widget class="QWidget" name="scroll_layers">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -208,7 +208,7 @@
         <height>393</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2"/>
+      <layout class="QHBoxLayout" name="layerLayout"/>
      </widget>
     </widget>
    </item>

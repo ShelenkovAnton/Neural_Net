@@ -8,7 +8,7 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 FORMS += \
-    GUI/layoutitem.ui \
+    GUI/layeritem.ui \
     GUI/learningwidget.ui \
     GUI/mainwindow.ui \
     GUI/paintwidget.ui \
@@ -17,7 +17,7 @@ FORMS += \
 HEADERS += \
     DataSet/dataset.h \
     DataSet/mnistset.h \
-    GUI/layoutitem.h \
+    GUI/layeritem.h \
     GUI/learningwidget.h \
     GUI/mainwindow.h \
     GUI/paintwidget.h \
@@ -31,7 +31,7 @@ HEADERS += \
 SOURCES += \
     DataSet/dataset.cpp \
     DataSet/mnistset.cpp \
-    GUI/layoutitem.cpp \
+    GUI/layeritem.cpp \
     GUI/learningwidget.cpp \
     GUI/mainwindow.cpp \
     GUI/paintwidget.cpp \

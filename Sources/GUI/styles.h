@@ -8,8 +8,8 @@ class Styles
 {
 public:
     static auto aply_background_style( QWidget* const, const QColor& ) -> void;
-
     static auto aply_btn_style( QWidget* const ) -> void;
+    static auto aply_group_box_style( QWidget* const ) -> void;
 
     static const struct Colors
     {
