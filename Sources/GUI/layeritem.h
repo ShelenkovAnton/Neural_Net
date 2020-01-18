@@ -14,13 +14,17 @@ class LayerItem final : public QWidget
 
 public:
     explicit LayerItem( QWidget* parent = nullptr );
-    ~LayerItem( );
+    ~LayerItem( ) override;
 
     auto get_neurons_count( ) const -> int;
     auto is_selected( ) const -> bool;
 
 protected:
     auto mousePressEvent( QMouseEvent* event ) -> void override;
+
+private:
+    auto init( ) -> void;
+    auto init_styles( ) -> void;
 
 private:
     Ui::LayerItem* ui;

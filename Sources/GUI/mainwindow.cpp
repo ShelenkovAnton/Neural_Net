@@ -44,8 +44,10 @@ auto MainWindow::add_widgets( ) -> void
 
 auto MainWindow::init_styles( ) -> void
 {
-    Styles::aply_background_style( this, {Styles::Colors::window_background} );
-    Styles::aply_btn_style( ui->frame_btn );
+    //  Styles::aply_main_style( this );
+
+    // Styles::aply_background_style( this, {Styles::Colors::window_background} );
+    // Styles::aply_btn_style( ui->frame_btn );
 }
 
 auto MainWindow::init_connections( ) -> void

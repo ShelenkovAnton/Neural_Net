@@ -8,8 +8,11 @@ class Styles
 {
 public:
     static auto aply_background_style( QWidget* const, const QColor& ) -> void;
-    static auto aply_btn_style( QWidget* const ) -> void;
     static auto aply_group_box_style( QWidget* const ) -> void;
+    static auto aply_selected_style( QWidget* const ) -> void;
+    static auto remove_selected_style( QWidget* const ) -> void;
+
+    static auto aply_main_style( QWidget* const ) -> void;
 
     static const struct Colors
     {
@@ -17,5 +20,10 @@ public:
         static constexpr auto btn_background         = "#1F2023";
         static constexpr auto checked_btn_background = "#0000FF";
         static constexpr auto hovered_btn_background = "#414144";
+        static constexpr auto selected_frame_color   = "#AAAAAA";
     } colors;
+
+private:
+    static auto get_selected_style( ) -> QString;
+    static auto get_main_style( ) -> QString;
 };
